@@ -1,6 +1,5 @@
 FROM python:3.7
-WORKDIR /project
-ADD . /project
-COPY app.py .
+ADD . /app
+WORKDIR /app
 RUN pip install -r requirements.txt
-CMD ["python", "app.py"]
+CMD python app/app.py
